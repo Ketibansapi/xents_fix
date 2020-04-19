@@ -81,7 +81,7 @@ export default class LoginScreen extends React.Component {
 
                 <TouchableOpacity style={{ alignSelf: "center", marginTop: 32}} onPress={() => this.props.navigation.navigate("Register")}>
                     <Text style = {{color: "#414959", fontSize: 13}}>
-                        New to Xent? <Text style= {{fontWeight: "500", color: "#E9446A"}}>Sign up</Text>
+                        New to Xent? <Text style= {{fontWeight: "500", color: "#F05900"}}>Sign up</Text>
                     </Text>
                 </TouchableOpacity>
             </View>
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     },
     button: {
         marginHorizontal: 30,
-        backgroundColor: "#E9446A",
+        backgroundColor: "#F05900",
         borderRadius: 4,
         height: 52,
         alignItems: "center",

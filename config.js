@@ -8,6 +8,9 @@ var FirebaseKeys = {
     appId: "1:1085247969861:web:29bf0bf227ef096974612c"
   };
 
+
+export default FirebaseKeys;
+
   // module.exports = {
   //   FirebaseKeys: {
   //     apiKey: "AIzaSyD43QSYgX1jA4VzHUqW9nwiSwdZ40bN_Ko",
