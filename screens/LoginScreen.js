@@ -2,9 +2,10 @@ import React from "react";
 import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, StatusBar, LayoutAnimation } from "react-native";
 import * as firebase from 'firebase'
 
+
 export default class LoginScreen extends React.Component {
     static navigationOptions = {
-        header: null
+        headerShown: false
     };
 
     state = {
@@ -24,14 +25,14 @@ export default class LoginScreen extends React.Component {
 
     render() {
         LayoutAnimation.easeInEaseOut();
-        
+
         return (
             <View style={styles.container}>
                 <StatusBar barStyle="light-content"></StatusBar>
                 
                 <Image 
                 source={require('../assets/authHeader.png')} 
-                style={{ marginTop: -310, marginLeft: -50}}
+                style={{ marginTop: -176, marginLeft: -50}}
                 ></Image>
 
                 <Image 
@@ -41,11 +42,11 @@ export default class LoginScreen extends React.Component {
 
                 <Image 
                 source={require('../assets/loginLogo.png')} 
-                style={{ marginTop: -80, marginLeft: 90}}
+                style={{ marginTop: -130, alignSelf: "center"}}
                 ></Image>
                 
                 <Text style = {styles.greeting}>
-                    {`Welcome to Xent!`}
+                    {`Welcome to Xent!\nSilahkan login terlebih dahulu.`}
                 </Text>
 
                 <View style = {styles.errorMessage}>
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     greeting: {
-        marginTop: -40,
+        marginTop: -32,
         fontSize: 18,
         fontWeight: "400",
         textAlign: "center"
