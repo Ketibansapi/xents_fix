@@ -1,9 +1,12 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { TextInput, TouchableOpacity } from "react-native-gesture-handler";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, StatusBar, LayoutAnimation } from "react-native";
 import * as firebase from 'firebase'
 
 export default class LoginScreen extends React.Component {
+    static navigationOptions = {
+        header: null
+    };
+
     state = {
         email: "",
         password: "",
@@ -20,10 +23,29 @@ export default class LoginScreen extends React.Component {
     };  
 
     render() {
+        LayoutAnimation.easeInEaseOut();
+        
         return (
             <View style={styles.container}>
+                <StatusBar barStyle="light-content"></StatusBar>
+                
+                <Image 
+                source={require('../assets/authHeader.png')} 
+                style={{ marginTop: -310, marginLeft: -50}}
+                ></Image>
+
+                <Image 
+                source={require('../assets/authFooter.png')} 
+                style={{ position: "absolute", bottom: -325, right: -225}}
+                ></Image>
+
+                <Image 
+                source={require('../assets/loginLogo.png')} 
+                style={{ marginTop: -80, marginLeft: 90}}
+                ></Image>
+                
                 <Text style = {styles.greeting}>
-                    {`Hello again.\nWelcome back.`}
+                    {`Welcome to Xent!`}
                 </Text>
 
                 <View style = {styles.errorMessage}>
@@ -71,7 +93,7 @@ const styles = StyleSheet.create({
         flex: 1
     },
     greeting: {
-        marginTop: 32,
+        marginTop: -40,
         fontSize: 18,
         fontWeight: "400",
         textAlign: "center"
